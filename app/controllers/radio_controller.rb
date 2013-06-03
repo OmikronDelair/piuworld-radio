@@ -1,0 +1,2 @@
+class RadioController < ApplicationController
+end
