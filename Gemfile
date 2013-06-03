@@ -8,10 +8,8 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.0.1'
-
-group :assets do
-  gem 'zurb-foundation'
-end
+gem 'haml'
+gem 'zurb-foundation', '~> 4.0.0'
 
 group :doc do
   gem 'sdoc', require: false
