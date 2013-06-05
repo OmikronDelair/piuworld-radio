@@ -57,3 +57,10 @@ ul.dropdown {
     margin-bottom: 0px;
   }
 }
+
+@media only screen and (max-width:400px) {
+  iframe {
+    text-align: center;
+    width: 300px;
+  }
+}
