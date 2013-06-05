@@ -23,3 +23,37 @@ iframe {
 ul.dropdown {
   text-align: center
 }
+
+.staff-photo {
+  display: inline-block;
+  float: left;
+  min-width: 150px !important;
+  img {
+    width: 150px;
+    border-radius: 5px;
+  }
+}
+
+.staff-info {
+  margin-left: 20px;
+  display: inline-block;
+  img {
+    width: 30px;
+  }
+  img, p, h3{
+    margin: 2px 0
+  }
+  h3 { line-height: 0.8 }
+  p.location {
+   line-height: 0.8;
+   font-size: 12px; 
+  }
+}
+
+.staff-description {
+  padding-top: 20px;
+  clear: both;
+  p {
+    margin-bottom: 0px;
+  }
+}

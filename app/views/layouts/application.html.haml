@@ -31,7 +31,7 @@
       %ul.right
         %li.divider
         %li
-          %a{href: '#'} Programacion
+          =link_to 'Programacion', '#', :data => {:'reveal-id' => 'programacion'}
         %li.divider
         %li.has-dropdown
           %a{href: '#'} Staff
@@ -41,7 +41,7 @@
             %li 
               =link_to 'Warp', '#'
             %li 
-              =link_to 'Omikron', '#'
+              =link_to 'Omikron', '#', :data => {:'reveal-id' => 'omikron'}
             %li 
               =link_to 'Deltanetworkz', '#'
             %li.divider
@@ -52,8 +52,10 @@
           %a Ayuda
           %ul.dropdown
             %li
-              %a{href: '#'} Creditos
+              =link_to 'Acerca de', '#', :data => {:'reveal-id' => 'acerca-de'}
 
   = yield
 
   = javascript_include_tag "application"
+
+  = render 'shared/modals'
