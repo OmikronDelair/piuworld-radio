@@ -7,6 +7,10 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.0.1'
 gem 'haml'
 
+group 'development' do
+  gem 'pry'
+end
+
 group :production do
   gem 'pg'
   gem 'zurb-foundation', '~> 4.0.4'
