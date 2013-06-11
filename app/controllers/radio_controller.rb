@@ -13,7 +13,7 @@ class RadioController < ApplicationController
     if track.include? server_off 
       @php = "FUERA DEL AIRE"
     else
-      @php = "<b>Estas escuchando:</b> #{track}".html_safe
+      @php = "<stong>Estas escuchando: #{track}</strong>".html_safe
     end
     render :layout => false
   end
