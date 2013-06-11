@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require foundation
 //= require turbolinks
+//= require audiojs/audio.min
+//= require audiojs/initialize
 //= require_tree .
 
 $(document).foundation();
