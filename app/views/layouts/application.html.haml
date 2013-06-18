@@ -20,6 +20,7 @@
   %title PIUWORLD Radio
 
   = stylesheet_link_tag "application"
+  = javascript_include_tag "application"
   = javascript_include_tag "vendor/custom.modernizr"
   = csrf_meta_tag
 
@@ -57,7 +58,5 @@
               =link_to 'Acerca de', '#', :data => {:'reveal-id' => 'acerca-de'}
 
   = yield
-
-  = javascript_include_tag "application"
 
   = render 'shared/modals'
