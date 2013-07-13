@@ -6,6 +6,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.0.1'
 gem 'haml'
+gem 'newrelic_rpm'
 
 group 'development' do
   gem 'pry'
