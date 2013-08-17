@@ -1,4 +1,5 @@
 class RadioController < ApplicationController
+  include ActionController::Live 
   require "net/http"
   require "uri"
 
@@ -9,13 +10,24 @@ class RadioController < ApplicationController
   end
 
   def track_info
-    track = Net::HTTP.get_response(SERVER).body.gsub(GARBAGE,"")
+    track = Net::HTTP.get_response(SERVER).body.gsub(GARBAGE,"").gsub("<font color='black'>","").gsub("</font>","").gsub("\n","")
     if track.match("Stream OFF") || track.match("Server OFF")
       @php = "FUERA DEL AIRE"
     else
-      @php = "<stong>Estas escuchando: #{track}</strong>".html_safe
+      @php = "Estas escuchando: #{track}"
     end
-    render :layout => false
+  end
+
+  def current_track
+    track_info()
+    response.headers['Content-Type'] = 'text/event-stream'
+    response.stream.write "event: track_info\n"
+    response.stream.write "data: #{JSON.dump(@php)}\n\n"
+    sleep 5
+  rescue IOError
+    # Disconnected
+  ensure
+    response.stream.close
   end
 
 end

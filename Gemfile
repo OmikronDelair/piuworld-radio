@@ -7,6 +7,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.0.1'
 gem 'haml'
 gem 'newrelic_rpm'
+gem 'puma'
 
 group 'development' do
   gem 'pry'
