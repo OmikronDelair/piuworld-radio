@@ -14,7 +14,7 @@ class RadioController < ApplicationController
     if track.match("Stream OFF") || track.match("Server OFF")
       @php = "FUERA DEL AIRE"
     else
-      @php = "Estas escuchando: #{track}"
+      @php = "Est\xC3\xA1s escuchando: #{track}".encode('ASCII-8BIT').force_encoding('UTF-8')
     end
   end
 
