@@ -24,6 +24,22 @@ ul.dropdown {
   text-align: center
 }
 
+.track-info {
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  font-family:"Trebuchet MS", Arial, Serif;
+  text-align: center;
+  background-color: rgba(0,0,0,0.7);
+  padding: 10px;
+  border-radius: 5px;
+  width: 440px;
+}
+
+.track-info, font{
+  color: white;
+}
+
 .staff-photo {
   display: inline-block;
   float: left;
@@ -45,8 +61,8 @@ ul.dropdown {
   }
   h3 { line-height: 0.8 }
   p.location {
-   line-height: 0.8;
-   font-size: 12px; 
+    line-height: 0.8;
+    font-size: 12px; 
   }
 }
 
