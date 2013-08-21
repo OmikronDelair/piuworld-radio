@@ -8,6 +8,7 @@ gem 'jbuilder', '~> 1.0.1'
 gem 'haml'
 gem 'newrelic_rpm'
 gem 'puma'
+gem 'settingslogic'
 
 group 'development' do
   gem 'pry'
