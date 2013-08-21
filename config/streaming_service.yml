@@ -1,11 +1,4 @@
-development: &default
 source: 'http://s3.freeshoutcast.com:40842/;stream.nsv' 
 status: 'http://cp.freeshoutcast.com/scripts/song2.php?port=40842&host=s3'
 response_garbage: ["\n","<style type='text/css'>","html, body, div, span, applet, object, iframe,","h1, h2, h3, h4, h5, h6, p, blockquote, pre,","a, abbr, acronym, address, big, cite, code,","del, dfn, em, font, img, ins, kbd, q, s, samp,","small, strike, strong, sub, sup, tt, var,","dl, dt, dd, ol, ul, li,","fieldset, form, label, legend,","table, caption, tbody, tfoot, thead, tr, th, td {","\tmargin: 0;","\tpadding: 0;","\tborder: 0;","\toutline: 0;","}","</style>","<meta content='text/html; charset=utf-8' http-equiv='content-type' />","<META HTTP-EQUIV='Refresh' CONTENT='30;'>","","",
   "<font color='black'>","</font>"]
-
-test:
-  <<: *default
-
-production:
-  <<: *default
