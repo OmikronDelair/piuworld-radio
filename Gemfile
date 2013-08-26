@@ -9,6 +9,7 @@ gem 'haml'
 gem 'newrelic_rpm'
 gem 'puma'
 gem 'settingslogic'
+gem 'mechanize'
 
 group 'development' do
   gem 'pry'
