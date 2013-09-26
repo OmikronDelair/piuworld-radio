@@ -6,6 +6,12 @@ class RadioController < ApplicationController
   def index
   end
 
+  def current_track
+    get_current_track track_info
+  end
+
+  private
+
   def track_info
     track = Net::HTTP.get_response(URI.parse(StreamingService.status)).body
     StreamingService.response_garbage.each { |garbage| track = track.gsub(garbage, '') }
@@ -17,11 +23,10 @@ class RadioController < ApplicationController
     end
   end
 
-  def current_track
-    track_info()
+  def get_current_track track
     response.headers['Content-Type'] = 'text/event-stream'
     response.stream.write "event: track_info\n"
-    response.stream.write "data: #{JSON.dump(@php)}\n\n"
+    response.stream.write "data: #{JSON.dump(track)}\n\n"
     sleep 5
   rescue IOError
     # Disconnected
