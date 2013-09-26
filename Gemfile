@@ -10,6 +10,7 @@ gem 'newrelic_rpm'
 gem 'puma'
 gem 'settingslogic'
 gem 'mechanize'
+gem 'devise'
 
 group 'development' do
   gem 'pry'
