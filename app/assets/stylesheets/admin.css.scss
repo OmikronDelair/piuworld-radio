@@ -1,0 +1,84 @@
+#sign-in{
+  padding-top: 23px;
+
+  .sign-in-form{
+    background-color: rgba(24,17,33,0.9);
+    padding: 15px 25px 25px 25px;
+    border-radius: 10px;
+    text-align: center;
+
+    h2 {
+      font-size: 3.0125em;
+      margin-bottom: 8px;
+    }
+
+    h2, label{
+      font-family: "PLZ", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
+      color: #dcdcd4;
+    }
+
+    div label {
+      text-align: left;
+      font-size: 1.375em;
+    }
+
+    div input {
+      border-radius: 5px;
+      text-align: center;
+      color: #4a3254 !important;
+      font-family: "PLZ", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
+      font-size: 0.975em;
+    }
+
+    a { 
+      display: inline-block;
+      font-family: "DynoRegular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
+      color: #dcdcd4;
+    }
+
+    form{
+      width: 80%;
+      margin: 10px 45px;
+
+      input#user_remember_me { 
+        display: inline-block;
+        position: relative;
+        right: -11px;
+        top: -6px;
+        opacity: 0;
+      }
+
+      label[for="user_remember_me"] { 
+        display: inline-block;
+        position: relative;
+        left: -15px; 
+      }
+
+      input[name="commit"] { 
+        margin-top: 10px;
+        background-color: rgba(255,255,255,0.18);
+        padding: 8px 22px 4px 24px;
+        margin-top: 5px !important;
+        color: white !important;
+        border: 0;
+      }
+      
+      input#user_remember_me + label[for="user_remember_me"] {
+        background-image: url(unchecked.png);
+        background-repeat: no-repeat;
+      }
+
+      input#user_remember_me:checked + label[for="user_remember_me"]{
+        background-image: url(check.png);
+        background-repeat: no-repeat;
+      }
+
+      label[for="user_remember_me"] {
+        padding-left: 30px;
+        padding-top: 1px;
+      }
+
+    }
+  }
+
+}
