@@ -11,18 +11,17 @@ gem 'puma'
 gem 'settingslogic'
 gem 'mechanize'
 gem 'devise'
+gem 'pg'
 
 group 'development' do
   gem 'pry'
 end
 
 group :production do
-  gem 'pg'
   gem 'zurb-foundation', '~> 4.0.4'
 end
 
-group :development, :test do
-  gem 'sqlite3'
+group :development do
   gem 'zurb-foundation', '~> 4.0.4'
 end
 
