@@ -7,6 +7,7 @@ Pwr::Application.routes.draw do
   resources :radio do
     collection do
       get :server_status
+      get :control_panel
     end
   end
 end
