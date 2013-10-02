@@ -6,7 +6,7 @@ Pwr::Application.routes.draw do
 
   resources :radio do
     collection do
-      get :current_track
+      get :server_status
     end
   end
 end

@@ -1,6 +1,6 @@
-this.source = new EventSource('/radio/current_track');
+this.source = new EventSource('/radio/server_status');
 
-this.source.addEventListener('track_info', function(e){
+this.source.addEventListener('streaming_status', function(e){
   $('.track-info').text(e.data.split('"')[1]);
 });
 
