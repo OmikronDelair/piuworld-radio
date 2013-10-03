@@ -14,10 +14,10 @@ class RadioController < ApplicationController
 
     if params[:server_status] == "ON"
       @io.start_server
-      redirect_to control_panel_radio_index_path
+      redirect_to djs_control_panel_path
     elsif params[:server_status] == "OFF"
       @io.stop_server
-      redirect_to control_panel_radio_index_path
+      redirect_to djs_control_panel_path
     end
   end
 

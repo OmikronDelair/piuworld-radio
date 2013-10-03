@@ -10,4 +10,6 @@ Pwr::Application.routes.draw do
       get :control_panel
     end
   end
+
+  get 'djs/control_panel', to: 'radio#control_panel'
 end
