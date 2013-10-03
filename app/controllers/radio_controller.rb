@@ -5,8 +5,9 @@ class RadioController < ApplicationController
   end
 
   def server_status
-    @stream = StreamingStatus.new(response)
-    @stream.stream_status
+    status = StreamingStatus.new.retrieve_status
+    sse = SSE.new(response)
+    sse.stream('streaming_status', status)
   end
 
   def control_panel

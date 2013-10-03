@@ -1,11 +1,6 @@
 class StreamingStatus
-  include ActionController::Live
   require "net/http"
   require "uri"
-
-  def initialize io
-   @io = io
-  end
 
   def retrieve_status
     status = Net::HTTP.get_response(URI.parse(StreamingService.status)).body
@@ -18,15 +13,4 @@ class StreamingStatus
     end
   end
 
-  def stream_status
-    status = retrieve_status
-    @io.headers['Content-Type'] = 'text/event-stream'
-    @io.stream.write "event: streaming_status\n"
-    @io.stream.write "data: #{JSON.dump(status)}\n\n"
-    sleep 5
-  rescue IOError
-    # Disconnected
-  ensure
-    @io.stream.close
-  end
 end
