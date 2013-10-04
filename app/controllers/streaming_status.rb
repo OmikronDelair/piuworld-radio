@@ -6,7 +6,7 @@ class StreamingStatus
     status = Net::HTTP.get_response(URI.parse(StreamingService.status)).body
     StreamingService.response_garbage.each {|garbage| status = status.gsub(garbage,'')}
 
-    if status.match("Stream OFF") || status.match("Server OFF")
+    if status.match("Stream OFF") || status.match("Server OFF") || status.match("502 Bad Gateway")
       @php = "FUERA DEL AIRE"
     else
       @php = "Est\xC3\xA1s escuchando: #{status}".encode('ASCII-8BIT').force_encoding('UTF-8')
