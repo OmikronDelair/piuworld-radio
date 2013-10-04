@@ -1,7 +1,7 @@
-#sign-in, #register, #control-panel{
+#sign-in, #register, #password, #control-panel{
   padding-top: 23px;
 
-  .sign-in-form, .sign-up-form, .panel-body{
+  .sign-in-form, .sign-up-form, .password-form, .panel-body{
     background-color: rgba(24,17,33,0.9);
     padding: 15px 25px 25px 25px;
     border-radius: 10px;
@@ -34,6 +34,7 @@
       display: inline-block;
       font-family: "DynoRegular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
       color: #dcdcd4;
+      padding: 0 5px;
     }
 
     form{
