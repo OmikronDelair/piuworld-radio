@@ -87,3 +87,16 @@ ul.dropdown {
     width: 300px;
   }
 }
+
+body {
+  .wibiya_toolbar_BG {
+    background-color: black !important;
+  }
+  .wibiyaToolbar_item_anchor {
+    display: none;
+  }
+  .itemLeft table {
+    background-color: black !important;
+    border: none;
+  }
+}
