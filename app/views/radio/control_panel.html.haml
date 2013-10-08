@@ -2,3 +2,7 @@
   .panel-body.large-12.columns{align: 'center'}
     %h2= @io.check_io_status
     = io_button
+    .broadcast-details
+      %p= "Host: #{StreamingService.broadcast_host}"
+      %p= "Port: #{StreamingService.broadcast_port}"
+      %p= "Password: #{StreamingService.broadcast_password}"
