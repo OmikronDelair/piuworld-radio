@@ -1,5 +1,9 @@
-this.source = new EventSource('/radio/server_status');
+if(this.location.pathname == "/") {
 
-this.source.addEventListener('streaming_status', function(e){
-  $('.track-info').text(e.data.split('"')[1]);
-});
+  this.source = new EventSource('/radio/server_status');
+
+  this.source.addEventListener('streaming_status', function(e){
+      $('.track-info').text(e.data.split('"')[1]);
+  });
+
+};
